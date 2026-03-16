@@ -8,7 +8,7 @@ row.names(gep) = gep$Gene_ID
 
 # Calculate GEP expression by averaging gene expression within each GEP
 g = GetAssayData(shoot1)
-e = aggregate(g, by = list(gep[row.names(g), 2]), mean)
+e = aggregate(g, by = list(gep[row.names(g), 3]), mean)
 row.names(e) = e[,1]
 e = e[, -1]
 
